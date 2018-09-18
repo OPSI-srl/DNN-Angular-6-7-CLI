@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { Context } from '../service/context.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from '../Http/interceptor';
+import { DemoService } from '../Service/demo.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { Interceptor } from '../Http/interceptor';
       useClass: Interceptor,
       multi: true
     },
+    DemoService
     ],
   bootstrap: [AppComponent]
 })

@@ -12,11 +12,13 @@ declare const window: any;
 })
 export class Context {
     // todo: probably should set the replay-buffer to 1 for all the following, but must test!
+
+    // private cbIdSubject = new ReplaySubject<number>(1);
     private tidSubject = new ReplaySubject<number>(1);
-    private cbIdSubject = new ReplaySubject<number>(1);
     private afTokenSubject = new ReplaySubject<string>(1);
-    private _properties: any = {};
-    _moduleId: string = "";
+    public _properties: any = {};
+    public _moduleId: string = "";
+
     tabId$ = this.tidSubject.asObservable();
     antiForgeryToken$ = this.afTokenSubject.asObservable();
 
@@ -31,14 +33,14 @@ export class Context {
     constructor(
         @Optional() private devSettings: DevContext  
     ) {
-
+        const MODULE = 'AngularTEMPLATE';
         // Dev settings with minimal ignore settings.
         this.devSettings = Object.assign({}, {
             ignoreMissing$2sxc: false,
             ignoreMissingServicesFramework: false
         }, devSettings);
 
-        const MODULE = 'AngularNGMD';
+        
         if (window && window[MODULE]) {
             this._properties = window[MODULE];
             console.log('​-----------------------------------------------------------------------');
