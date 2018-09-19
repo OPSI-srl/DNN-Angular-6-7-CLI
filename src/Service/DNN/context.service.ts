@@ -57,9 +57,6 @@ export class Context {
         this._moduleId = this._properties.ModuleId;
         // Check if DNN Services framework exists.
         if (window.$ && window.$.ServicesFramework) {
-        console.log('TCL: ----------------------------------------------------------------------------');
-        console.log('TCL: autoConfigure -> window.$.ServicesFramework', window.$.ServicesFramework);
-        console.log('TCL: ----------------------------------------------------------------------------');
  
             // Run timer till sf is ready, but max for a second.
             const t = timer(0, 100)
@@ -75,16 +72,9 @@ export class Context {
                     // Check if sf is initialized.
                     if (sf.getAntiForgeryValue() && sf.getTabId() !== -1) {
                         t.unsubscribe();
-                        console.log('TCL: ----------------------------');
-                        console.log('TCLqqqqqqqqqqqqqqqqqqqqqq: autoConfigure -> sf', window.$.ServicesFramework().getTabId());
-                        console.log('TCL: ----------------------------');
-
                         this.tidSubject.next(sf.getTabId());
                         this.afTokenSubject.next(sf.getAntiForgeryValue());
                     } else {
-                        console.log('TCL: ----------------------------');
-                        console.log('RESET', sf);
-                        console.log('TCL: ----------------------------');
                         // Must reset, as they are incorrectly initialized when accessed early.
                         if (window.dnn && window.dnn.vars && window.dnn.vars.length === 0) {
                             window.dnn.vars = null;
