@@ -14,9 +14,40 @@ To handle an Angular 6 project with DNN you need 2 different project:
 4. How to use DNN webapi and angular
 
 # Features
-### Automatic Routing with Angular app
-### Automatic Routing with Angular app
- 
+### Example to read info from .ascx
+**File**: /Service/DNN/context.service.ts
+MODULE = 'AngularTEMPLATE'; **Remember to rename this constant as you write it in .ascx file.** 
+
+### Example how to insert in HTTP ModuleId moduleid, TabId and RequestVerificationToken
+**File**: /Http/interceptor.ts
+
+### Example how to use DNN and webAPI
+**file**: /Service/demo.service.ts
+-  Automatic Routing with Angular app
+
+```html 
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule, // important - this changed in Angular 4.3 
+  ],
+  providers: [    
+    Context,
+    {
+      <b>provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true<b/>
+    },
+    DemoService
+    ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
 
 ## Development server
 
