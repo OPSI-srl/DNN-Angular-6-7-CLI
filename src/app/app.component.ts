@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { DemoService } from '../Service/demo.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Context } from '../Service/DNN/context.service';
+import { take, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +12,11 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class AppComponent {
   title = 'template-DNN7';
 
-  constructor(private _demoService: DemoService) { 
+  constructor(public context: Context, private _demoService: DemoService) {
     this.getDataFromWebAPI();
   }
 
   private getDataFromWebAPI() {
-
     this._demoService.getStagingOutputList().subscribe(data => {
       var obj = JSON.parse(data, function (key, value) {
         //PARSE HERE SPECIAL DATA
@@ -24,7 +25,7 @@ export class AppComponent {
         } else {
           //return value;
         }
-        return (value == null && typeof(value) == 'string' ? '-' : value);
+        return (value == null && typeof (value) == 'string' ? '-' : value);
       });
       console.log('​---------------------------------');
       console.log('TCL: AppComponent -> privategetDataFromWebAPI -> obj', obj);
@@ -35,9 +36,9 @@ export class AppComponent {
           console.log('​---------------------------------');
           console.log('TCL: AppComponent -> privategetDataFromWebAPI -> ERROR', err.error);
           console.log('​---------------------------------');
-    
+
         } else {
-        
+
         }
       }
     );
