@@ -36,11 +36,11 @@ MODULE = 'AngularTEMPLATE'; **Remember to rename this constant as you write it i
   ],
   providers: [    
     Context,
-    {
-      <b>provide: HTTP_INTERCEPTORS,
-      useClass: Interceptor,
-      multi: true<b/>
-    },
+    {                               // important for http interceptor
+      provide: HTTP_INTERCEPTORS,   // important for http interceptor
+      useClass: Interceptor,        // important for http interceptor
+      multi: true                   // important for http interceptor
+    },                              // important for http interceptor
     DemoService
     ],
   bootstrap: [AppComponent]
