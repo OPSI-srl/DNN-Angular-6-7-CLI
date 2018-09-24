@@ -1,10 +1,10 @@
-# Angular CLI Template for DNN 7.x, 8.x, 9.x.
+# Angular 6 - CLI Template for DNN 7.x, 8.x, 9.x.
 This project was generted with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 # Description
 To Develop Angular 6 project with DNN you need 2 different project:
 1. Angular CLI project **(this project)**
-2. DNN module that host your angular 
+2. DNN module that host your angular (template-dnn-7.x-for-angular-6)
 
 
 # Issues resolved with DNN 7.x and Angular 6
