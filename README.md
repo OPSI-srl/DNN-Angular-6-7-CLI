@@ -2,7 +2,7 @@
 This project was generted with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 # Description
-To handle an Angular 6 project with DNN you need 2 different project:
+To Develop Angular 6 project with DNN you need 2 different project:
 1. Angular CLI project **(this project)**
 2. DNN module that host your angular 
 
