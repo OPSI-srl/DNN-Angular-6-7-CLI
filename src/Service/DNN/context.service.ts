@@ -18,6 +18,7 @@ export class Context {
     private afTokenSubject = new ReplaySubject<string>(1);
     public _properties: any = {};
     public _moduleId: string = "";
+    public _userId: string = "";
 
     tabId$ = this.tidSubject.asObservable();
     antiForgeryToken$ = this.afTokenSubject.asObservable();
@@ -55,6 +56,7 @@ export class Context {
 
     autoConfigure() {
         this._moduleId = this._properties.ModuleId;
+        this._userId = this._properties.UserId;
         // Check if DNN Services framework exists.
         if (window.$ && window.$.ServicesFramework) {
  

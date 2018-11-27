@@ -10,10 +10,11 @@ import { take, mergeMap } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'template-DNN7';
+  title = 'template-DNN7-DNN8-DNN9';
 
   constructor(public context: Context, private _demoService: DemoService) {
     this.getDataFromWebAPI();
+    
   }
 
   private getDataFromWebAPI() {
@@ -44,5 +45,8 @@ export class AppComponent {
     );
   }
 
+  log(par: any): string{
+    return JSON.stringify(par).toString();
+  }
 }
 

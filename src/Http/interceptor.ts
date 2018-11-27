@@ -18,6 +18,7 @@ export class Interceptor implements HttpInterceptor {
             ModuleId: this.context._moduleId.toString(),
             TabId: ctx.tabId.toString(),
             RequestVerificationToken: ctx.antiForgeryToken,
+            userid: this.context._userId,
             'X-Debugging-Hint': 'bootstrapped by bbAngular, 2SXC, OPSI',
           }
         });
