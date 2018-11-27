@@ -48,7 +48,9 @@ MODULE = 'AngularTEMPLATE'; **Remember to rename this constant as you write it i
 export class AppModule { }
 ```
 
-##Link DNN to your Angular project
-Now open a dos prompt in your ~/DesktopModules/AngularNGMD and enter the following command
-mklink /J dist [FolderOfAngularProject]/dist
+#Link DNN to your Angular project
 
+Now open a dos prompt in your ~/DesktopModules/AngularNGMD and enter the following command
+```
+mklink /J dist [FolderOfAngularProject]/dist
+```
