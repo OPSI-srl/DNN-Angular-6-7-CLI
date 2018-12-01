@@ -48,9 +48,20 @@ MODULE = 'AngularTEMPLATE'; **Remember to rename this constant as you write it i
 export class AppModule { }
 ```
 
+
 #Link DNN to your Angular project
 
 Now open a dos prompt in your ~/DesktopModules/AngularNGMD and enter the following command
 ```
 mklink /J dist [FolderOfAngularProject]/dist
 ```
+
+# Reference
+This project is just an avolution or code encapsulation made from these important resources by Torsten Weggen and Danile Mettler:
+
+`<link>` : http://www.bitboxx.net/Blog/Post/525/DNN-module-development-with-Angular-2-Part-7#/
+
+`<link>` : https://2sxc.org/en/blog/post/how-to-correctly-connect-dnn-to-angular-4-5-using-reactive-javascript
+
+`<link>` : https://github.com/2sic/dnn-sxc-angular
+
