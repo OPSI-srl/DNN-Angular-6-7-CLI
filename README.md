@@ -1,5 +1,5 @@
 # Angular 6 - CLI Template for DNN 7.x, 8.x, 9.x.
-This project was generted with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+This project was generted with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
 
 # Description
 To Develop Angular 6 project with DNN you need 2 different project:
@@ -13,7 +13,7 @@ https://github.com/OPSI-srl/Angular-6---Visual-studio-Template-for-DNN-7.x-8.x-9
 https://github.com/OPSI-srl/Angular-6.x-and-7.x---scaffold-SPA-HTML-Module-Visual-studio-Template-for-DNN-9.x
 
 # Issues resolved with DNN 7.x and Angular 6
-1. How to develop your Angular CLI (Tested for Angular CLI: 6.1.2) and deploy inside DNN 7.x.
+1. How to develop your Angular CLI (Tested for Angular CLI: 7.1.0) and deploy inside DNN 7.x.
 2. How to pass information from DNN to Angular
 3. Angulare 6 is too fast to load information than DNN. You need to make all information available to DNN in the correct format.
 4. How to use DNN webapi and angular
