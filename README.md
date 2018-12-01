@@ -6,10 +6,11 @@ To Develop Angular 6 project with DNN you need 2 different project:
 1. Angular CLI project **(this project)**
 2. DNN module that host your angular project:
 
-`<link>` : dnn7.x - .ascx 
+`<link>` : dnn7.x dnn8.x dnn9.x - .ascx 
 https://github.com/OPSI-srl/Angular-6---Visual-studio-Template-for-DNN-7.x-8.x-9.x.
 
-`<link>` : dnn9.x - .html https://github.com/OPSI-srl/Angular-6.x-and-7.x---scaffold-SPA-HTML-Module-Visual-studio-Template-for-DNN-9.x
+`<link>` : dnn9.x - .html 
+https://github.com/OPSI-srl/Angular-6.x-and-7.x---scaffold-SPA-HTML-Module-Visual-studio-Template-for-DNN-9.x
 
 # Issues resolved with DNN 7.x and Angular 6
 1. How to develop your Angular CLI (Tested for Angular CLI: 6.1.2) and deploy inside DNN 7.x.
