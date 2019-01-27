@@ -11,8 +11,8 @@ export class DemoService {
   private demorouting: string;
 
   constructor(private context: Context, private http: HttpClient) {
-    this._routingWebAPI = "/DesktopModules/Angular6Demo/API/"
-    // this._routingWebAPI = this.context._properties.routingWebAPI;
+    //this._routingWebAPI = "/DesktopModules/Angular6Demo/API/"
+    this._routingWebAPI = this.context._properties.routingWebAPI;
   }
 
   public getStagingOutputList(): Observable<any> {
