@@ -10,36 +10,29 @@ import { take, mergeMap } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'template-DNN7-DNN8-DNN9';
+  title = 'template Angular for DNN7-DNN8-DNN9';
+  webapiResult = '';
 
   constructor(public context: Context, private _demoService: DemoService) {
-    this.getDataFromWebAPI();
-    
+    context.autoConfigure();
   }
 
   private getDataFromWebAPI() {
     this._demoService.getStagingOutputList().subscribe(data => {
-      var obj = JSON.parse(data, function (key, value) {
-        //PARSE HERE SPECIAL DATA
-        if (key == "message") {
-          // return new Date(value);
-        } else {
-          //return value;
-        }
-        return (value == null && typeof (value) == 'string' ? '-' : value);
-      });
+      this.webapiResult = data;
       console.log('​---------------------------------');
-      console.log('TCL: AppComponent -> privategetDataFromWebAPI -> obj', obj);
+      console.log('Call webapi data -> data: ', data);
       console.log('​---------------------------------');
     },
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
           console.log('​---------------------------------');
-          console.log('TCL: AppComponent -> privategetDataFromWebAPI -> ERROR', err.error);
+          console.log('Call webapi error -> ERROR: ', err.error);
           console.log('​---------------------------------');
-
         } else {
-
+          console.log('​---------------------------------');
+          console.log('Call webapi error -> ERROR: ', err.error);
+          console.log('​---------------------------------');
         }
       }
     );

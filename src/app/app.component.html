@@ -7,19 +7,22 @@
 </div>
 
 <div>
-  context._moduleId: {{context._moduleId}}<br/> 
-  context._properties.routingWebAPI: {{context._properties.routingWebAPI}}<br/> 
-  context._properties.IsEditable: {{context._properties.IsEditable}}<br/>
-  context._properties.EditMode: {{context._properties.EditMode}}<br/> 
-  context._properties.ModuleId: {{context._properties.ModuleId}}<br/> 
-  context._properties.PortalId: {{context._properties.PortalId}}<br/> 
-  context._properties.UserId: {{context._properties.UserId}}<br/> 
-  context._properties.CurrentLanguage: {{context._properties.CurrentLanguage}}<br/> 
-  context._properties.TabId: {{context._properties.TabId}}<br/>
-  context._properties.PortalLanguages: {{context._properties.PortalLanguages}}<br/> 
-  context._properties.CurrentLanguage: {{context._properties.CurrentLanguage}}<br/> 
-  context._properties.Resources: {{ log(context._properties.Resources)}}<br/>
+  context._moduleId: {{ context._moduleId }}<br/> 
+  context._properties.routingWebAPI: {{ context._properties.routingWebAPI }}<br/>  
+  context._properties.IsEditable: {{ context._properties.IsEditable }}<br/> 
+  context._properties.EditMode: {{ context._properties.EditMode }}<br/> 
+  context._properties.ModuleId: {{ context._properties.ModuleId }}<br/> 
+  context._properties.PortalId: {{ context._properties.PortalId }}<br/> 
+  context._properties.UserId: {{ context._properties.UserId }}<br/> 
+  context._properties.CurrentLanguage: {{ context._properties.CurrentLanguage }}<br/> 
+  context._properties.TabId: {{ context._properties.TabId }}<br/> 
+  context._properties.PortalLanguages: {{ context._properties.PortalLanguages }}<br/> 
+  context._properties.CurrentLanguage: {{ context._properties.CurrentLanguage }}<br/>
+  context._properties.Resources: {{ log(context._properties.Resources) }}<br/>
   context._properties.Resources[0]: {{context._properties.Resources.AddItem_Text}}<br/>
-
-  antiForgeryToken: (see console log)<br/> 
+  antiForgeryToken: (see console log)<br/>
+  <div>
+    <button type="button" (click)="getDataFromWebAPI()">call DNN webapi</button>
+    webapi return: {{webapiResult}}
+  </div>
 </div>

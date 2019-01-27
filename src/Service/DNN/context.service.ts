@@ -34,7 +34,7 @@ export class Context {
     constructor(
         @Optional() private devSettings: DevContext  
     ) {
-        const MODULE = 'AngularTEMPLATE';
+        const MODULE = 'Angular6Demo';
         // Dev settings with minimal ignore settings.
         this.devSettings = Object.assign({}, {
             ignoreMissing$2sxc: false,
